@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="thunar" version="1.0">
+  <property name="last-view" type="string" value="ThunarIconView"/>
+  <property name="misc-single-click" type="bool" value="false"/>
+  <property name="misc-parallel-copy-mode" type="string" value="THUNAR_PARALLEL_COPY_MODE_ALWAYS"/>
+  <property name="misc-recursive-permissions" type="string" value="THUNAR_RECURSIVE_PERMISSIONS_ALWAYS"/>
+  <property name="misc-exec-shell-scripts-by-default" type="bool" value="true"/>
+  <property name="misc-open-new-window-as-tab" type="bool" value="false"/>
+  <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_32"/>
+  <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_32"/>
+  <property name="misc-image-preview-mode" type="string" value="THUNAR_IMAGE_PREVIEW_MODE_EMBEDDED"/>
+  <property name="default-view" type="string" value="ThunarIconView"/>
+  <property name="misc-date-style" type="string" value="THUNAR_DATE_STYLE_LONG"/>
+</channel>
