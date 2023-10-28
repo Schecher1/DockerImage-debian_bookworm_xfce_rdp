@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Function to check and start the sesman service if not running
+#Function to check and start the sesman service if not running
 start_sesman() {
     if ! pgrep -x "xrdp-sesman" > /dev/null; then
         echo "xrdp-sesman not running. Starting sesman..."
@@ -10,9 +10,12 @@ start_sesman() {
     fi
 }
 
-# Start sesman
+#Set the password for the user 'user' to the value of USER_PASSWORD
+echo "user:$USER_PASSWORD" | chpasswd
+
+#Call the function to start sesman
 start_sesman
 
-# Start xrdp
+#Start xrdp
 /usr/sbin/xrdp -n
 

@@ -1,8 +1,8 @@
-#set default values if the environment variables are not provided
-ENV USER_PASSWORD=changeme
-
 #use the debian bookworm image
 FROM debian:bookworm
+
+#set default values if the environment variables are not provided
+ENV USER_PASSWORD=changeme
 
 #update all package directories
 RUN apt update 
@@ -24,7 +24,7 @@ RUN apt remove xfce4-power-manager-plugins -y
 RUN apt clean && apt autoremove -y
 
 #create default user called "user", with password "changeme" if nothing was provided (ENV)
-RUN useradd -m -s /bin/bash -p $(openssl passwd -1 $USER_PASSWORD) user
+RUN useradd -m -s /bin/bash user
 
 #copy files
 COPY /data/startScript.sh /usr/local/bin/startScript.sh
